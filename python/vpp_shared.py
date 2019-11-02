@@ -51,33 +51,3 @@ class VppConfig:
         response = requests.post(self.__VPP_SERVICE_CONFIG_SRV_URL)
         response.raise_for_status()
         return response.json()
-
-    # for now we only have properties for the ones we care about
-
-    # @property
-    # def maxBatchAssociateLicenseCount(self):
-    #     return self.__vppEndpoints[VppConfigFieldNames.MAX_BATCH_ASSOCIATED_LICENSE]
-
-    # @property
-    # def maxBatchDisassociateLicenseCount(self):
-    #     return self.__vppEndpoints[VppConfigFieldNames.MAX_BATCH_DISASSOCIATED_LICENSE]
-    
-    # @property
-    # def getUsersSrvUrl(self):
-    #     return self.__vppEndpoints[VppConfigFieldNames.GET_USERS_SRV]
-
-    # @property
-    # def getLicensesSrvUrl(self):
-    #     return self.__vppEndpoints[VppConfigFieldNames.GET_LICENSES_SRV]
-
-    # @property
-    # def manageVPPLicensesByAdamIdSrvUrl(self):
-    #     return self.__vppEndpoints[VppConfigFieldNames.MANAGED_VPP_LICENSES_BY_ADAMID_SRV]
-
-    # @property
-    # def getVPPAssetsSrvUrl(self):
-    #     return self.__vppEndpoints[VppConfigFieldNames.GET_VPP_ASSETS_SRV]
-
-    # @property
-    # def contentMetadataLookupUrl(self):
-    #     return self.__vppEndpoints[VppConfigFieldNames.CONTENT_METADATA_LOOKUP]
