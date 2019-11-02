@@ -20,14 +20,6 @@ def get_assets_for_token(vppConfig, vppToken):
     return { asset["adamIdStr"] : asset for asset in assetsList }
 
 
-def show_vpp_token_assets(assets):
-    pp = pprint.PrettyPrinter(indent=4)
-    for asset in assets.values():
-        pp.pprint(asset.values())
-
-    pp.pprint(assets)
-
-
 def main():
     parser = argparse.ArgumentParser(description = "Calls into Apple's VPP API to get all the assets under a vpp token")    
     parser.add_argument("--token", help = "Apple VPP token file downloaded from ABM/ASM", required = True)
